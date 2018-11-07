@@ -1,0 +1,25 @@
+.main-block {
+    margin: auto;
+    height: 300px;
+    width: 500px;
+    background-color: grey;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.button-block {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.result {
+    margin: 20px auto 50px auto;
+    width: 50%;
+    height: 150px;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}
