@@ -17,3 +17,4 @@ function cloneObject () {
     console.log('clone Object is:');
     console.log(cloneUser);
 }
+
