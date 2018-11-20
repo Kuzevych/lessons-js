@@ -1,23 +1,20 @@
 function flatten(arr) {
-    var newArr = [];
-    for (var i=0; i<arr.length; i++) {
+    var flattenArr = [];
+    for (var i = 0; i < arr.length; i++) {
         if(!Array.isArray(arr[i])){
-            newArr.push(arr[i]);
-            console.log(arr[i]);
+            flattenArr.push(arr[i]);
         } else {
-            for (var j=0; j<arr[i].length; j++) {
-                if (!Array.isArray(arr[i][j])){
-                    newArr.push(arr[i][j]);
-                    console.log(arr[i][j]);
+            for (var j = 0; j < arr[i].length; j++) {
+                if(!Array.isArray(arr[i][j])){
+                    flattenArr.push(arr[i][j]);
                 } else {
-                    for(var b=0; b<arr[i][j]; b++) {
-                        if (!Array.isArray(arr[i][j][b])){
-                            newArr.push(arr[i][j][b]);
-                            console.log(arr[i][j][b]);
-                        } else {
-                            for (var n=0; n<arr[i][j][b]; n++) {
-                                if(!Array.isArray(arr[i][j][b][n])); {
-
+                    for (var n = 0; n < arr[i][j].length; n++) {
+                        if(!Array.isArray(arr[i][j][n])) {
+                            flattenArr.push(arr[i][j][n]);
+                        }else {
+                            for (var m = 0; m < arr[i][j][n].length; m++) {
+                                if(!Array.isArray(arr[i][j][n][m])){
+                                    flattenArr.push(arr[i][j][n][m]);
                                 }
                             }
                         }
@@ -26,8 +23,19 @@ function flatten(arr) {
             }
         }
     }
-    console.log(newArr);
+    console.log('Flatten array is: ' + flattenArr);
 }
 
-flatten([1, [2, [3, [4]], 5]]);
-
+// function flatten(arr) {
+//     var newArr = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         if(!Array.isArray(arr[i])){
+//             newArr.push(arr[i]);
+//             newArr;
+//         } else if (Array.isArray(arr[i])){
+//             console.log(arr[i]);
+//             flatten(arr[i]);
+//         }
+//     }
+//     console.log(newArr);
+// }
