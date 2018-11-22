@@ -1,20 +1,31 @@
+var user = {
+    name: 'Kolya',
+    surname: 'Kuzevych',
+    age: 27,
+    company: {
+        name: 'Prodex',
+        address: 'R. Okipnoy'
+    }
+};
 
-
-function cloneObject () {
-    var user = {
-        name: 'Kolya',
-        surname: 'Kuzevych',
-        age: 27
-    };
-    console.log('Old Object "user" is:');
-    console.log(user);
-    var cloneUser = {};
-
-    for (var i in user) {
-        cloneUser[i]=user[i];
+function simpleClone (data) {
+    var clonedData = {};
+    for (var i in data) {
+        if(typeof data[i]!=='object'){
+            clonedData[i] = data[i];
+        } else if(typeof user[i]==='object') {
+            clonedData[i] = simpleClone(data[i]);
+        }
     }
 
-    console.log('clone Object is:');
-    console.log(cloneUser);
+    return clonedData;
 }
 
+console.log(user.company.name);
+
+
+const clonedUser = simpleClone(user);
+
+clonedUser.company.name = 'Another';
+console.log(clonedUser.company.name);
+console.log(user.company.name);
