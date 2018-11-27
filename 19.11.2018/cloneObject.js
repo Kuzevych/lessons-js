@@ -8,13 +8,13 @@ var user = {
     }
 };
 
-function simpleClone (data) {
+function deepClone (data) {
     var clonedData = {};
     for (var i in data) {
         if(typeof data[i]!=='object'){
             clonedData[i] = data[i];
         } else if(typeof user[i]==='object') {
-            clonedData[i] = simpleClone(data[i]);
+            clonedData[i] = deepClone(data[i]);
         }
     }
 
@@ -24,7 +24,7 @@ function simpleClone (data) {
 console.log(user.company.name);
 
 
-const clonedUser = simpleClone(user);
+const clonedUser = deepClone(user);
 
 clonedUser.company.name = 'Another';
 console.log(clonedUser.company.name);
