@@ -1,8 +1,4 @@
 
-function Student(){
-
-}
-
 
 var student1 = {
     name: 'Ivan',
@@ -18,7 +14,13 @@ var student1 = {
 }
 var student2 = {name: 'Semen',
     surname: 'Semenov',
-    grades: [3,5,5]
+    grades: [3,5,5],
+    getAvgGrave: function () {
+        var avg = this.grades.reduce(function (sum, cur) {
+            return sum + cur;
+        });
+        return (avg / this.grades.length).toFixed(2);
+    }
 };
 var student3 = {name: 'Petr',
     surname: 'Petrov',
@@ -26,4 +28,6 @@ var student3 = {name: 'Petr',
 };
 
 console.log(student1.getAvgGrave());
+console.log(student2.getAvgGrave());
+var Student = [student1, student2, student3];
 
