@@ -40,25 +40,7 @@ console.log(student1.getAvgGrave());
 console.log(student2.getAvgGrave());
 console.log(student3.getAvgGrave());
 
-let arr = [1,2,3,4,5];
 
-console.log(arr.map( i => i+=2));
-
-console.log(arr.filter(i => i>2));
-
-
-function sumTo(n) {
-    if (n>0) {
-        var res = n * sumTo(n-1)
-        console.log(res);
-        return res;
-    } else {
-        return 1;
-    }
-
-}
-
-sumTo(3);
 
 
 
