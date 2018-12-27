@@ -1,6 +1,3 @@
-//DZDZDZDZDZDZDZDZ
-
-
 
 function Student(name,surname,grades){
     this.name = name,
