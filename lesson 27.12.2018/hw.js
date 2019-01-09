@@ -24,3 +24,5 @@ function removeClass(node,klass){
 hasClass(div,'fisst');
 addClass(div,'newClass');
 removeClass(div, 'first');
+
+
