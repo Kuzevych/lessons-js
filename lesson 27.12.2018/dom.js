@@ -74,8 +74,3 @@
 // var thirdChild = document.querySelector('#third p');
 // console.log(thirdChild.contains(third));
 
-var elements = document.getElementsByClassName('content')[0];
-elements.style.background = 'red';
-
-var div = document.createElement('div');
-console.log(div);
