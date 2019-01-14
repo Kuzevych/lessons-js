@@ -23,14 +23,14 @@
 
 
 window.onload = function() {
+    var btn = document.createElement("button");
+    var t = document.createTextNode(i);
+    btn.appendChild(t);
     for (var i = 0; i < 10; i++) {
-        var button = document.createElement('button');
-        // button.createTextNode('click');
-        document.body.appendChild(button);
-        button.onclick = function () {
+        document.body.appendChild(btn);
+        btn.onclick = function () {
             alert(i);
         }
-
     }
 };
 
