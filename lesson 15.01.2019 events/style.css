@@ -1,0 +1,14 @@
+#parent {
+    width: 600px;
+    height: 140px;
+    background: yellow;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#parent * {
+    width: 100px;
+    height: 100px;
+    background: blue;
+}
