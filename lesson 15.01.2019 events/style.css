@@ -4,15 +4,20 @@
     background: yellow;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
 }
 
 #parent * {
     width: 100px;
     height: 100px;
     background: blue;
+    color: white;
+    text-align: center;
+
 }
 
 .child {
+    position: absolute;
+    align-items: center;
     font-size: 26px;
 }
