@@ -22,15 +22,27 @@
 // showNotification(options);
 
 
-window.onload = function() {
-    var btn = document.createElement("button");
-    var t = document.createTextNode(i);
-    btn.appendChild(t);
+// window.onload = function() {
+//     for (var i = 0; i < 10; i++) {
+//         var btn = document.createElement("button");
+//         var iterator = document.createTextNode(i);
+//         btn.appendChild(iterator);
+//         document.body.appendChild(btn);
+//         btn.addEventListener('click',function(){
+//             alert(i);
+//         })
+//     }
+// };
+
+window.onload = function(){
+    function showIterator(){
+        alert(i);
+    }
     for (var i = 0; i < 10; i++) {
-        document.body.appendChild(btn);
-        btn.onclick = function () {
-            alert(i);
-        }
+        var button = document.createElement('button');
+        var text = document.createTextNode(i);
+        button.appendChild(text);
+        document.body.appendChild(button);
+        button.addEventListener('click',showIterator);
     }
 };
-
