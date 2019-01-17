@@ -22,27 +22,15 @@
 // showNotification(options);
 
 
-// window.onload = function() {
-//     for (var i = 0; i < 10; i++) {
-//         var btn = document.createElement("button");
-//         var iterator = document.createTextNode(i);
-//         btn.appendChild(iterator);
-//         document.body.appendChild(btn);
-//         btn.addEventListener('click',function(){
-//             alert(i);
-//         })
-//     }
-// };
-
 window.onload = function(){
-    function showIterator(){
-        alert(i);
-    }
     for (var i = 0; i < 10; i++) {
         var button = document.createElement('button');
         var text = document.createTextNode(i);
+        let iter = i;
         button.appendChild(text);
         document.body.appendChild(button);
-        button.addEventListener('click',showIterator);
+        button.onclick = function(){
+            alert(iter);
+        }
     }
 };
