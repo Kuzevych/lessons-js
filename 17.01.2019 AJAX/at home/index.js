@@ -5,8 +5,7 @@ btn.onclick = function () {
     var option = {
         method:'GET'
     };
-
-    var promise = fetch('https://api.exchangeratesapi.io/history?start_at=2019-01-07&end_at=2019-01-20&symbols=USD', option).then(function (response) {
+    var promise = fetch('https://api.exchangeratesapi.io/history?start_at=2019-01-07&end_at=2019-01-20&symbols=USD,RUB', option).then(function (response) {
         return response.json();
     });
 
@@ -15,7 +14,9 @@ btn.onclick = function () {
             return response
         })
         .then(function (data) {
-            console.log(data);
+            console.log(data.rates);
         });
 };
+
+
 
