@@ -24,7 +24,7 @@ btn.onclick = function () {
             console.log(valuesUsd);
             var ctx = document.getElementById('myChart').getContext('2d');
             var chart = new Chart(ctx, {
-                type: 'bar',
+                type: 'line',
                 data: {
                     labels: dates,
                     datasets: [{
