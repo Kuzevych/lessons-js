@@ -1,11 +1,28 @@
 var btn = document.getElementById('start');
 
+function todayDate() {
+    var date = new Date();
+    return (date.getFullYear()+'-'+date.getMonth()+1+'-'+(date.getDate()));
+}
+
+
+function twoWeeksAgo(){
+    var date = new Date();
+    if (date.getDate()>15){
+        return(date.getFullYear()+'-'+date.getMonth()+1+'-'+(date.getDate()-14));
+    } else if (date.getDate()<=15){
+        return date.getFullYear()+'-'+date.getMonth()-1+'-'+(date.getDate()+17);
+    }
+}
+
+
+
 btn.onclick = function () {
 
     var option = {
         method:'GET'
     };
-    var promise = fetch('https://api.exchangeratesapi.io/history?start_at=2019-01-06&end_at=2019-01-20&symbols=USD', option).then(function (response) {
+    var promise = fetch('https://api.exchangeratesapi.io/history?start_at='+twoWeeksAgo()+'&end_at='+todayDate()+'&symbols=USD', option).then(function (response) {
         return response.json();
     });
      promise
@@ -39,7 +56,6 @@ btn.onclick = function () {
 
         });
 };
-
 
 
 
