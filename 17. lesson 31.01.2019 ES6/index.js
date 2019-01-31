@@ -1,3 +1,4 @@
+
 //geter seter for object
 
 // const user = {
@@ -35,4 +36,66 @@
 // for(let key in proxyUser){
 //     console.log(proxyUser[key]);
 // }
+
+
+
+
+// const getFullName = (name, surname) => `${name} ${surname}`;
+//
+// const proxyFunc = new Proxy(getFullName, {
+//     apply(target, thisPointer, args) {
+//         return `FullName: ${target.apply(null,args)}`;
+//     }
+// });
+// console.log(getFullName('name','Surname'));
+// console.log(proxyFunc('test','test'));
+
+
+// const obj = {
+//     prop1: 'value1',
+//     prop2: 'value2',
+//     prop3: 'value3',
+// };
+// const mergeBoth = ({ prop1, prop2}) => `${prop1} ${prop2}`;
+// console.log(mergeBoth(obj));
+
+
+
+const currencyMap = new Map();
+// currencyMap.set('usd',28);
+// currencyMap.set('eur',32);
+// currencyMap.set('rub',0.4);
+// console.log(currencyMap);
+// const arr = [];
+// currencyMap.forEach((value,key) => {
+//    if (value > 25) {
+//        arr.push(key);
+//    }
+// });
+// console.log(arr);
+//
+// const values = currencyMap.values();
+// const keys = currencyMap.keys();
+// const entries = currencyMap.entries();
+// console.log(values);
+// console.log(keys);
+// console.log(entries);
+
+
+//Collection SET
+// const set = new Set();
+//
+// set.add(1);
+// set.add(2);
+// set.add(3);
+// set.add(4);
+// set.add('hello');
+// set.has(2);
+//
+//
+// for (let key of set) {
+//     console.log(key);
+// }
+
+
 
