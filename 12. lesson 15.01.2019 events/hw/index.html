@@ -6,10 +6,29 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <button onclick="startFunction();">TEST</button>
-    <button>SETTINGS</button>
+    <button onclick="createEquation();">TEST</button>
+    <button onclick="settings();">SETTINGS</button>
     <button onclick="check();">CHECK</button>
+    <div class = 'checkboxes' hidden>
+        <div>
+            <input type="checkbox" id="add" name="+" checked="checked">
+            <label for="add">+</label>
+        </div>
+        <div>
+            <input type="checkbox" id="substract" name="-" checked="checked">
+            <label for="substract">-</label>
+        </div>
+        <div>
+            <input type="checkbox" id="multiply" name="*" checked="checked">
+            <label for="multiply">*</label>
+        </div>
+        <div>
+            <input type="checkbox" id="divide" name="/" checked="checked">
+            <label for="divide">/</label>
+        </div>
+    </div>
     <div class="main"></div>
 <script src="javascript.js"></script>
+<script src="settings.js"></script>
 </body>
 </html>
