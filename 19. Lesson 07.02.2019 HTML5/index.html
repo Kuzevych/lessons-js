@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5</title>
+</head>
+<body>
+<!--<label for="color">Color</label>-->
+<!--<input type="color" id="color">-->
+<!--<audio controls >-->
+    <!--<source  src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg" >-->
+    <!--Your browser does not support the audio element.-->
+<!--</audio>-->
+<script>
+
+    const date = new Date();
+
+    date.setFullYear(date.getFullYear()+1);
+    document.cookie = 'Kolya';
+    const x = document.cookie = `username=Nick; expires=${date}`;
+    console.log(x);
+    document.cookie = `order=12 expires=${date} max-age=15`;
+</script>
+<!--<label for="color">Color</label>-->
+<!--<input id="range" type="range" id="color">-->
+<script src="index.js"></script>
+</body>
+</html>
