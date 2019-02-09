@@ -1,9 +1,9 @@
 
 function Student(name,surname,grades){
     this.name = name,
-    this.surname = surname,
-    this.grades = grades,
-    Student.group.push(this);
+        this.surname = surname,
+        this.grades = grades,
+        Student.group.push(this);
     return this;
 };
 Student.group = [];
