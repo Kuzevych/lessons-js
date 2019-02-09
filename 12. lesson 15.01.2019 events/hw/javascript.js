@@ -25,8 +25,8 @@ const createEquation = () => {
         const input = document.createElement('input');
         const resultP = document.createElement('p');
         resultP.className = 'result';
-        const firstNumber = getRandomNumber(100, 1);
-        const secondNumber = getRandomNumber(20, 1);
+        const firstNumber = getRandomNumber(15, 1);
+        const secondNumber = getRandomNumber(15, 1);
         const randSymbol = symbolArray[getRandomNumber(4, 0)];
         resultEquationArray.push(equation(firstNumber,secondNumber,randSymbol).toFixed(0));
         p.textContent = firstNumber + randSymbol + secondNumber;
@@ -40,10 +40,10 @@ const createEquation = () => {
 
 const settings = () => {
     const checkboxesBlock = document.querySelector('.settings');
-    if (checkboxesBlock.style.display === 'none') {
-        checkboxesBlock.style.display = 'show';
-    } else {
+    if (checkboxesBlock.style.display === 'block') {
         checkboxesBlock.style.display = 'none';
+    } else {
+        checkboxesBlock.style.display = 'block';
     }
 };
 

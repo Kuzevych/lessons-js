@@ -5,6 +5,6 @@ div {
     align-items: center;
 }
 
-/*.settings {*/
-    /*display: none;*/
-/*}*/
+.settings {
+    display: none;
+}
