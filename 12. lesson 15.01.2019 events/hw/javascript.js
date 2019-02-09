@@ -1,12 +1,11 @@
-let getRandomNumber = (min,max) => {
+const getRandomNumber = (min,max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
 const symbolArray = ['+','-','*','/'];
 const resultEquationArray = [];
 
-
-let equation = (firstNumber,secondNumber, symbol) => {
+const equation = (firstNumber,secondNumber, symbol) => {
     if (symbol === '+'){
         return firstNumber + secondNumber;
     } else if (symbol ==='-'){
@@ -18,8 +17,8 @@ let equation = (firstNumber,secondNumber, symbol) => {
     }
 };
 
-let createEquation = () => {
-    for (let i = 0; i < 10; i++) {
+const createEquation = () => {
+    for (let i = 0; i < 5; i++) {
         const div = document.createElement('div');
         div.className = 'equation';
         const p = document.createElement('p');
@@ -39,8 +38,18 @@ let createEquation = () => {
     return resultEquationArray;
 };
 
+const settings = () => {
+    const checkboxesBlock = document.querySelector('.settings');
+    if (checkboxesBlock.style.display === 'none') {
+        checkboxesBlock.style.display = 'show';
+    } else {
+        checkboxesBlock.style.display = 'none';
+    }
+};
 
-let check = () => {
+
+
+const check = () => {
     const divs = document.querySelectorAll('.equation');
     for (let i = 0; i < divs.length; i++) {
         if(resultEquationArray[i] === divs[i].children[1].value) {
@@ -48,6 +57,5 @@ let check = () => {
         } else {
             divs[i].children[2].textContent = 'false';
         }
-//        console.log(divs[i].children[2].textContent = 'true');
     }
 };

@@ -1,9 +1,9 @@
-let settings = () => {
-    const checkboxesBlock = document.querySelector('.checkboxes');
-    if (checkboxesBlock.hidden === true) {
-        checkboxesBlock.hidden = false;
+const settings = () => {
+    const checkboxesBlock = document.querySelector('.settings');
+    if (checkboxesBlock.style.display === 'none') {
+        checkboxesBlock.style.display = 'show';
     } else {
-        checkboxesBlock.hidden = true;
+        checkboxesBlock.style.display = 'none';
     }
 };
 
