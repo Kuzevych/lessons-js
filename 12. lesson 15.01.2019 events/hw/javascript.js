@@ -48,7 +48,6 @@ const settings = () => {
 };
 
 
-
 const check = () => {
     const divs = document.querySelectorAll('.equation');
     for (let i = 0; i < divs.length; i++) {
