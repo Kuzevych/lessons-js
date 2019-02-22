@@ -8,52 +8,51 @@ const headerMap = {
 };
 
 class Table {
-  constructor(data) {
-    this.data = data;
-    this.creatingOrder = {};
-    this._initView();
-  }
-
-  _initView() {
-    this.container = document.querySelector('.container');
-    this.table = document.createElement('table');
-    this.container.appendChild(this.table);
-
-    const thead = document.createElement('thead');
-    this.table.appendChild(thead);
-    Object.keys(headerMap).forEach((headerKey) => {
-      const th = document.createElement('th');
-      th.textContent = headerMap[headerKey];
-      thead.appendChild(th);
-    });
-
-    this.tbody = document.createElement('tbody');
-    this.table.appendChild(this.tbody);
-
-    this.data.forEach((item, index) => {
-      const tr = document.createElement('tr');
-      this.tbody.appendChild(tr);
-      Object.keys(headerMap).forEach((headerKey) => {
-        const td = document.createElement('td');
-        if (item[headerKey]) {
-          td.textContent = item[headerKey];
-        } else {
-          const button = document.createElement('button');
-          button.textContent = headerMap[headerKey];
-          button.onclick = this._handleRowAction.bind(this, headerKey, index);
-          td.appendChild(button);
+        constructor(data) {
+          this.data = data;
+          this.creatingOrder = {};
+          this._initView();
         }
-        tr.appendChild(td);
-      });
-    });
-  }
 
-  _handleRowAction(actionType, index) {
-    if (actionType === 'delete') {
-      console.log(event.target.parentElement.parentElement);
-      this.tbody.removeChild(event.target.parentElement.parentElement);
-      this.data = this.data.filter((item, i) => i !== index);
-    } else if (actionType === 'edit') {
+        _initView() {
+          this.container = document.querySelector('.container');
+          this.table = document.createElement('table');
+          this.container.appendChild(this.table);
+
+          const thead = document.createElement('thead');
+          this.table.appendChild(thead);
+          Object.keys(headerMap).forEach((headerKey) => {
+            const th = document.createElement('th');
+            th.textContent = headerMap[headerKey];
+            thead.appendChild(th);
+          });
+
+          this.tbody = document.createElement('tbody');
+          this.table.appendChild(this.tbody);
+          this.data.forEach((item, index) => {
+            const tr = document.createElement('tr');
+            this.tbody.appendChild(tr);
+            Object.keys(headerMap).forEach((headerKey) => {
+              const td = document.createElement('td');
+              if (item[headerKey]) {
+                td.textContent = item[headerKey];
+              } else {
+                const button = document.createElement('button');
+                button.textContent = headerMap[headerKey];
+                button.onclick = this._handleRowAction.bind(this, headerKey, index);
+                td.appendChild(button);
+              }
+              tr.appendChild(td);
+            });
+          });
+        }
+
+        _handleRowAction(actionType, index) {
+          if (actionType === 'delete') {
+            console.log(event.target.parentElement.parentElement);
+            this.tbody.removeChild(event.target.parentElement.parentElement);
+            this.data = this.data.filter((item, i) => i !== index);
+          } else if (actionType === 'edit') {
 
     }
   }

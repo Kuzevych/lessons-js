@@ -42,3 +42,9 @@ button.click(()=>{
        console.log('Done');
    })
 });
+
+
+fetch('api.openweathermap.org/data/2.5/weather?q=London').then(response => response.json())
+    .then(data => {
+        console.log(data);
+    });
