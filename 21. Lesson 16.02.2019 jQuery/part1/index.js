@@ -44,7 +44,7 @@ button.click(()=>{
 });
 
 
-fetch('api.openweathermap.org/data/2.5/weather?q=London').then(response => response.json())
+fetch('api.openweathermap.org/data/2.5/weather?q=Kiev&appid=8ee84ef191c24dd0a40f9dda6261a0cf&units=metric').then(response => response.json())
     .then(data => {
         console.log(data);
     });
